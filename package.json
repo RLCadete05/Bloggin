@@ -1,5 +1,6 @@
 {
-  "name": "MovaDesafio",
+  "name": "AlkabotDesafio",
+  "author": "Raquel Cadete <ubunturaquel@gmail.com>",
   "version": "1.0.0",
   "private": true,
   "scripts": {
