@@ -5,7 +5,7 @@
       <v-divider />
       <br />
       <br />
-      <h1 class="text-center">{{ idCards.title }}</h1>
+      <h1 class="text-left">{{ idCards.title }}</h1>
       <br />
       <v-img
         class="mx-auto"

@@ -14,7 +14,7 @@
     </v-btn>
     <v-btn
       elevation="0"
-      width="40"
+      width="30"
       class="font-weight-regular text-capitalize hidden-sm-and-up"
       @click="toUsers"
     >

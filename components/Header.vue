@@ -6,12 +6,11 @@
           ><img
             src="../assets/Bloggin.png"
             alt="Logo Bloggin"
-            height="180px"
-            class="mr-4"
+            height="120px"
         /></NuxtLink>
       </div>
       <v-spacer />
-      <Posts style="margin-rigth: 10px"/>
+      <Posts />
       <Users />
     </v-app-bar>
   </div>
