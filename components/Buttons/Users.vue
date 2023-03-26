@@ -9,8 +9,8 @@
       color="#0D47A1"
       @click="toUsers"
     >
-      <v-icon dense style="margin-rigth:5px"> mdi mdi-post </v-icon>
-      Postagens
+      <v-icon dense> mdi-account-circle </v-icon>
+        Usuários
     </v-btn>
     <v-btn
       elevation="0"
@@ -18,7 +18,7 @@
       class="font-weight-regular text-capitalize hidden-sm-and-up"
       @click="toUsers"
     >
-      <v-icon dense style="margin-rigth:5px"> mdi mdi-post </v-icon>
+      <v-icon dense> mdi-account-circle </v-icon>
     </v-btn>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   name: 'Users',
   methods: {
     toUsers() {
-      this.$router.push({ path: '/' })
+      this.$router.push({ path: '/users' })
     }
   }
 }

@@ -1,8 +1,5 @@
 <template>
     <div>
-        <!-- <h3>{{ comment.body }}</h3> -->
-
-   
       <v-list>
         <v-list-item class="d-flex">
           <v-avatar  class="mt-3 mr-3 align-self-start" color="#cecece" size="40">

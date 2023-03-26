@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container-cards">
-      <FlagsCard v-for="card in paginatedItems" :key="card.id" :card="card" />
+      <PostsCards v-for="card in paginatedItems" :key="card.id" :card="card" />
     </div>
 
     <div class="container-pagination">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import FlagsCard from "../components/Flags/FlagsCards.vue";
+import PostsCards from "../components/Cards/PostsCards.vue";
 
 export default {
   name: "IndexPage",
@@ -33,7 +33,7 @@ export default {
     };
   },
   components: {
-    FlagsCard,
+    PostsCards,
   },
   async mounted() {
     await this.getAll();

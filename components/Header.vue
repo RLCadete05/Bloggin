@@ -11,15 +11,16 @@
         /></NuxtLink>
       </div>
       <v-spacer />
-      <Posts style="margin-right: 10px" />
+      <Posts style="margin-rigth: 10px"/>
       <Users />
     </v-app-bar>
   </div>
 </template>
 
 <script>
-import Users from "./buttons/Users.vue";
-import Posts from "./buttons/Posts.vue";
+
+import Users from "./Buttons/Users.vue";
+import Posts from "./Buttons/Posts.vue";
 
 export default {
   name: "Header",

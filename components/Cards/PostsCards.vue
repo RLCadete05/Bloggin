@@ -9,7 +9,7 @@
         width="316"
         :elevation="hover ? 12 : 2"
         :class="{ 'on-hover': hover }"
-        @click="toCountry()"
+        @click="toCards()"
       >
         <v-img
           class="mx-auto"
@@ -30,8 +30,8 @@ export default {
     card: Object,
   },
   methods: {
-    toCountry() {
-      this.$router.push({ path: `/country/${this.card.id}` });
+    toCards() {
+      this.$router.push({ path: `/idCards/${this.card.id}` });
     },
   },
 };

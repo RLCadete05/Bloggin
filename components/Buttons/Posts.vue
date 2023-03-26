@@ -7,28 +7,28 @@
       outlined
       tile
       color="#0D47A1"
-      @click="toUsers"
+      @click="toPosts"
     >
-      <v-icon dense style="margin-rigth:5px"> mdi-account-circle </v-icon>
-      Usuários
+      <v-icon dense style="margin-rigth:5px"> mdi mdi-post </v-icon>
+      Postagens
     </v-btn>
     <v-btn
       elevation="0"
       width="40"
       class="font-weight-regular text-capitalize hidden-sm-and-up"
-      @click="toUsers"
+      @click="toPosts"
     >
-      <v-icon dense style="margin-rigth:5px"> mdi-account-circle </v-icon>
+      <v-icon dense style="margin-rigth:5px"> mdi mdi-post </v-icon>
     </v-btn>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Users',
+  name: 'Posts',
   methods: {
-    toUsers() {
-      this.$router.push({ path: '/users' })
+    toPosts() {
+      this.$router.push({ path: '/' })
     }
   }
 }

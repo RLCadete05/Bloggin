@@ -5,7 +5,7 @@
       <v-divider />
       <br />
       <br />
-      <h1 class="text-center">{{ country.title }}</h1>
+      <h1 class="text-center">{{ idCards.title }}</h1>
       <br />
       <v-img
         class="mx-auto"
@@ -15,9 +15,12 @@
         style="border-radius: 10px"
       ></v-img>
       <div class="container-cards">
-        <p>{{ country.body }}</p>
+        <p>{{ idCards.body }}</p>
 
-        <h3 class="my-6">{{ comments.length }} Comentários</h3>
+        <h3 class="my-6">
+          <v-icon>mdi mdi-comment </v-icon
+          > {{ comments.length }} Comentários
+        </h3>
 
         <Comments
           v-for="comment in comments"
@@ -42,7 +45,7 @@ export default {
         perPage: 12,
         visible: 7,
       },
-      country: {},
+      idCards: {},
       comments: [],
     };
   },
@@ -52,17 +55,17 @@ export default {
   },
 
   async created() {
-    await this.getCountry();
+    await this.getCards();
   },
   methods: {
-    async getCountry() {
+    async getCards() {
       try {
         const response = await this.$axios.$get(`/posts/${this.id}`);
         const responseComments = await this.$axios.$get(
           `/posts/${this.id}/comments`
         );
 
-        this.country = response;
+        this.idCards = response;
         this.comments = responseComments;
       } catch (error) {
         throw new Error(error);

@@ -1,28 +1,32 @@
 <template>
-  <v-container>
-    <v-simple-table
-      class="mx-auto"
-      style="width: 70%"
-      fixed-header
-      height="400px"
-    >
-      <thead>
-        <tr>
-          <th class="text-left">Nome</th>
-          <th class="text-left">Username</th>
-          <th class="text-center">Detalhes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="user in users" :key="user.name">
-          <td>{{ user.name }}</td>
-          <td>{{ user.username }}</td>
-          <td class="text-center">
-            <v-icon small @click="details(user)"> mdi-account-details </v-icon>
-          </td>
-        </tr>
-      </tbody>
-    </v-simple-table>
+  <div>
+    <v-row>
+      <v-col class="mx-auto" cols="12" sm="8" md="8">
+        <v-simple-table
+          fixed-header
+          height="400px"
+        >
+          <thead>
+            <tr>
+              <th class="text-left">Nome</th>
+              <th class="text-left">Username</th>
+              <th class="text-center">Detalhes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="user in users" :key="user.name">
+              <td>{{ user.name }}</td>
+              <td>{{ user.username }}</td>
+              <td class="text-center">
+                <v-icon small @click="details(user)">
+                  mdi-account-details
+                </v-icon>
+              </td>
+            </tr>
+          </tbody>
+        </v-simple-table>
+      </v-col>
+    </v-row>
 
     <v-row justify="center">
       <v-dialog v-model="dialog" persistent max-width="600px">
@@ -145,7 +149,7 @@
         </v-card>
       </v-dialog>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -177,3 +181,8 @@ export default {
   },
 };
 </script>
+<style>
+  .v-data-table__wrapper {
+    overflow-x: hidden !important;
+  }
+</style>
